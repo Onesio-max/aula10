@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+    <title>TAILWINDCSSv4</title>
+    <style>
+        @import `tailwindcss/base´;
+        @import `tailwindcss/componentes´;
+        @import `tailwindcss/utilities´;
+
+        .dropdown-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            
+            
+        }
+
+        .dropdown:hover .dropdown-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+
+        }
+
+        .menu-link{
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .arrow {
+            transition: transform 0,3s ease;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7x1 mx-auto px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">~
+                    <h1 class="text-2x1 font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300 cursor-pointer">
+                        meu site
+                    </h1>
+
+
+                </div>
+                <nav class="flex space-x-8">
+                    <a href="#" class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text"></a>
+
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    
+</body>
+</html>
